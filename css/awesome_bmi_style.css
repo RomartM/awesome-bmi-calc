@@ -1,0 +1,349 @@
+#ft_in, #in_cm {
+  display: none;
+}
+
+.bmi-form {
+  background-color: #191919;
+  background-image: url('../images/particles.png');
+  background-size: 120%;
+  border-radius: 6px;
+  border-top-right-radius: 140px;
+  display: flex;
+  max-width: 600px;
+  padding: 18px;
+}
+
+.bmi-form-wrapper:before {
+    color: white;
+    content: "BMI Calculator";
+    font-size: 25px;
+    padding: 6px;
+}
+
+.input-form {
+  width: 50%;
+}
+
+.output-form {
+  margin: auto;
+  width: 50%;
+}
+
+/* Ripple effect */
+#submit {
+  background-position: center;
+  margin: 10px;
+  transition: background 0.8s;
+}
+
+#submit:hover {
+  background: #4CAF50 radial-gradient(circle, transparent 1%, #81C784 1%) center/15000%;
+}
+
+#submit:active {
+  background-color: #66BB6A;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+label:after {
+  content: ":";
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+  }
+
+  50% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0);
+  }
+}
+
+.input-radio {
+  margin: 16px 0;
+}
+
+.input-radio.input-radio-inline {
+  display: inline-block;
+}
+
+.input-radio input[type="radio"] {
+  display: none;
+}
+
+.input-radio input[type="radio"]:checked+label:before {
+  animation: ripple 0.2s linear forwards;
+  border-color: #66bb6a;
+}
+
+.input-radio input[type="radio"]:checked+label:after {
+  transform: scale(1);
+}
+
+.input-radio label {
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin-bottom: 0;
+  padding: 0 30px;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.input-radio label:before, .input-radio label:after {
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  transition: all .3s ease;
+  transition-property: transform, border-color;
+}
+
+.input-radio label:before {
+  border: 2px solid rgba(0, 0, 0, 0.54);
+  height: 20px;
+  left: 0;
+  top: 0;
+  width: 20px;
+}
+
+.input-radio label:after {
+  background: #66bb6a;
+  height: 10px;
+  left: 7px;
+  top: 7px;
+  transform: scale(0);
+  width: 10px;
+}
+
+.input-container input[type="number"] {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  color: #66bb6a;
+  font-size: 20px;
+  max-width: 90px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.input-container select {
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  color: #66bb6a;
+  font-size: 22px;
+  margin: 5px;
+  outline: 0;
+  padding: 5px
+}
+
+/* Button style */
+button {
+  background-color: #46c8a1;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  padding: 12px 18px;
+  text-transform: uppercase;
+}
+
+.bmi-form-wrapper {
+  background: linear-gradient(-10deg, #8EF378, #1CBBB4);
+  border-radius: 6px;
+  max-width: 600px;
+  padding: 2px;
+}
+
+.bmi-wrapper {
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  height: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  position: absolute;
+  width: 0px;
+}
+
+.bmi-label {
+  margin: auto;
+}
+
+.bmi-wrapper span.bmi-label:before {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(-10deg, #8EF378, #1CBBB4);
+  content: "BMI";
+  font-size: 0px;
+}
+
+.bmi-wrapper .bmi-label span {
+  font-size: 50px;
+  margin: auto;
+}
+
+.bmi-value {
+  background: linear-gradient(-10deg, #8EF378, #1CBBB4);
+  border-radius: 50%;
+  color: #010101;
+  display: flex;
+  height: 0px;
+  margin: auto;
+  width: 0px;
+}
+
+.bmi-value span {
+  color: white;
+  font-size: 0px;
+  margin: auto;
+}
+
+.bmi-type {
+  font-size: 19px;
+  margin: 20px;
+  opacity: 0;
+  text-align: center;
+  transform: scale(0.01);
+}
+
+.bmi-type span {
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+  white-space: nowrap;
+}
+
+.bmi-type span:before {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(-10deg, #8EF378, #1CBBB4);
+  content: attr(data-content);
+}
+
+.bmi-value {
+  transition: .5s cubic-bezier(0, 0.89, 0.58, 1) .1s;
+}
+
+.bmi-value span {
+  transition: .3s ease-in-out .4s;
+}
+
+.bmi-wrapper {
+  margin-left: 105px;
+  margin-top: 80px;
+  opacity: 0;
+  transition: .3s cubic-bezier(0.42, 0, 0, 1.63) .5s;
+}
+
+.bmi-wrapper span.bmi-label:before {
+  transition: .3s cubic-bezier(0.42, 0, 0, 1.63) .4s;
+}
+
+.bmi-type {
+  transition: .3s cubic-bezier(0.42, 0, 0, 1.39) .6s;
+}
+
+.output-form {
+  transform: rotate(-120deg) scale(0.001);
+  transition: .5s cubic-bezier(0.42, 0, 0, 1.07);
+}
+
+.abc-results .bmi-value {
+  height: 130px;
+  width: 130px;
+}
+
+.abc-results .bmi-value span {
+  font-size: 35px;
+}
+
+.abc-results div .bmi-wrapper {
+  height: 50px;
+  opacity: 1;
+  width: 50px;
+}
+
+.abc-results div .bmi-wrapper span.bmi-label:before {
+  font-size: 18px;
+}
+
+.abc-results .bmi-type {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.abc-results.output-form {
+  transform: rotate(0deg) scale(1);
+}
+
+/* BMI Suggestion */
+
+.bmi-suggestion-label {
+    background-color: #46c8a1;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 12px 3px;
+    margin-top: 31px;
+    padding: 2px;
+    text-align: center;
+}
+
+.bmi-link-thumbnail>img {
+    border-radius: 50%;
+    margin: 5px;
+    min-height: 70px;
+    min-width: 70px;
+    width: 70px;
+}
+
+.bmi-suggested-link-wrapper>a {
+    background-color: #ffffff0a;
+    border-radius: 4px;
+    display: flex;
+    margin: 10px 0px;
+    padding: 3px;
+    text-decoration: none !important;
+    transition: .5s;
+}
+
+.bmi-link-label {
+    color: white;
+    font-size: 16px;
+    margin: auto 0px auto 12px;
+}
+
+.bmi-suggested-link-wrapper>a:hover {
+    background-color: #242424e3;
+}
+
+/** Responsive **/
+@media (max-width:768px) {
+  .bmi-form {
+    flex-direction: column;
+  }
+
+  .output-form {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input-form div {
+    margin: 10px auto;
+  }
+}

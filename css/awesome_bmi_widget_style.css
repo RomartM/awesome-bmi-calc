@@ -1,0 +1,50 @@
+.bmi-form {
+  color: white;
+  font-size: 12px;
+  min-height: 270px;
+}
+
+.output-form {
+  display: none;
+  width: 100%;
+}
+
+.input-form {
+    width: 100%;
+}
+
+.bmi-form-wrapper {
+    max-width: 300px;
+    min-height: 337px;
+}
+
+.input-container input[type="number"] {
+  font-size: 15px;
+  margin-left: 8px;
+  padding: 5px;
+}
+
+.input-container select {
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+.input-radio label:before {
+  height: 15px;
+  width: 15px;
+}
+
+.input-radio label:after {
+  height: 9px;
+  left: 5px;
+  top: 5px;
+  width: 9px;
+}
+
+#submit, #reset {
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 13px;
+}
