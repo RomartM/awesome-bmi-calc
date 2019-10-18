@@ -2,7 +2,7 @@
 /*
 Plugin Name: Awesome BMI Calculator
 PLugin URI: https://demo.plugins.code
-Description: Allows Calculate your Body Mass Index
+Description: Allows to Calculate your Body Mass Index with Posts Suggestion
 Version: 1.0
 Licence: MIT License
 */
